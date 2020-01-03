@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fVV-Q9-rmK" customClass="InvoiceSectionFooterView" customModule="EasyTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKM-Cy-sT1">
+                    <rect key="frame" x="0.0" y="0.0" width="363" height="44"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" red="0.37254901959999998" green="0.4549019608" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgX-iq-1e1">
+                    <rect key="frame" x="12" y="0.0" width="351" height="0.5"/>
+                    <color key="backgroundColor" red="0.79607843137254897" green="0.82352941176470584" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="6ju-sm-z2l"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RdI-p7-zZ5" firstAttribute="trailing" secondItem="PgX-iq-1e1" secondAttribute="trailing" constant="12" id="AWm-8Y-GUU"/>
+                <constraint firstItem="PgX-iq-1e1" firstAttribute="top" secondItem="fVV-Q9-rmK" secondAttribute="top" id="MrQ-Mg-fUs"/>
+                <constraint firstItem="RdI-p7-zZ5" firstAttribute="bottom" secondItem="LKM-Cy-sT1" secondAttribute="bottom" id="S8h-oJ-VGH"/>
+                <constraint firstItem="LKM-Cy-sT1" firstAttribute="leading" secondItem="RdI-p7-zZ5" secondAttribute="leading" id="aWs-dP-uAE"/>
+                <constraint firstItem="RdI-p7-zZ5" firstAttribute="trailing" secondItem="LKM-Cy-sT1" secondAttribute="trailing" constant="12" id="ch3-EF-8ga"/>
+                <constraint firstItem="LKM-Cy-sT1" firstAttribute="top" secondItem="fVV-Q9-rmK" secondAttribute="top" id="jLG-6V-Emz"/>
+                <constraint firstItem="PgX-iq-1e1" firstAttribute="leading" secondItem="RdI-p7-zZ5" secondAttribute="leading" constant="12" id="l0L-nl-EvL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="RdI-p7-zZ5"/>
+            <connections>
+                <outlet property="lblTitle" destination="LKM-Cy-sT1" id="VCl-kA-Egw"/>
+            </connections>
+        </view>
+    </objects>
+</document>

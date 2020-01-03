@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Address" representedClassName=".Address" syncable="YES">
+        <attribute name="addressId" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="address" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="object" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Object" inverseName="address" inverseEntity="Object" syncable="YES"/>
+        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="deliveryAddress" inverseEntity="Order" syncable="YES"/>
+    </entity>
+    <entity name="Contact" representedClassName=".Contact" syncable="YES">
+        <attribute name="contactId" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fax" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="contacts" inverseEntity="Customer" syncable="YES"/>
+    </entity>
+    <entity name="Customer" representedClassName=".Customer" syncable="YES">
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerId" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Address" inverseName="customer" inverseEntity="Address" syncable="YES"/>
+        <relationship name="contacts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Contact" inverseName="customer" inverseEntity="Contact" syncable="YES"/>
+    </entity>
+    <entity name="Expense" representedClassName=".Expense" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="discount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="expenseId" attributeType="String" syncable="YES"/>
+        <attribute name="materialId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="typeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="workTypeId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="job" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Job" inverseName="expenses" inverseEntity="Job" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Files" inverseName="expense" inverseEntity="Files" syncable="YES"/>
+    </entity>
+    <entity name="Files" representedClassName=".Files" syncable="YES">
+        <attribute name="fileId" attributeType="String" syncable="YES"/>
+        <attribute name="fileUrl" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="photo" inverseEntity="Expense" syncable="YES"/>
+        <relationship name="job" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Job" inverseName="images" inverseEntity="Job" syncable="YES"/>
+    </entity>
+    <entity name="Job" representedClassName=".Job" isAbstract="YES" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="discount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="entityType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="information" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobId" attributeType="String" syncable="YES"/>
+        <attribute name="members" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="statusId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Expense" inverseName="job" inverseEntity="Expense" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Files" inverseName="job" inverseEntity="Files" syncable="YES"/>
+    </entity>
+    <entity name="Material" representedClassName=".Material" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasValueInStock" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="inStock" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="materialId" attributeType="String" syncable="YES"/>
+        <attribute name="materialNr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pricePerUnit" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="serailNr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stockQuantity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="unitId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Object" representedClassName=".Object" parentEntity="Job" syncable="YES">
+        <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="object" inverseEntity="Address" syncable="YES"/>
+    </entity>
+    <entity name="Order" representedClassName=".Order" parentEntity="Job" syncable="YES">
+        <attribute name="contact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deliveryTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objects" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="deliveryAddress" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Address" inverseName="order" inverseEntity="Address" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName=".Project" parentEntity="Job" syncable="YES">
+        <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="objects" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Type" representedClassName=".Type" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeId" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Address" positionX="-621" positionY="-153" width="128" height="165"/>
+        <element name="Contact" positionX="-623" positionY="75" width="128" height="150"/>
+        <element name="Customer" positionX="-839" positionY="-18" width="128" height="135"/>
+        <element name="Expense" positionX="34" positionY="-234" width="128" height="223"/>
+        <element name="Files" positionX="36" positionY="24" width="128" height="120"/>
+        <element name="Job" positionX="-191" positionY="-238" width="128" height="253"/>
+        <element name="Material" positionX="241" positionY="-234" width="128" height="193"/>
+        <element name="Object" positionX="-405" positionY="-171" width="128" height="88"/>
+        <element name="Order" positionX="-405" positionY="5" width="128" height="103"/>
+        <element name="Project" positionX="-407" positionY="-342" width="128" height="88"/>
+        <element name="Type" positionX="241" positionY="-360" width="128" height="90"/>
+        <element name="User" positionX="-621" positionY="-315" width="128" height="120"/>
+    </elements>
+</model>

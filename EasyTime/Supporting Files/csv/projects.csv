@@ -1,0 +1,21 @@
+EntityType,jobId,customerId,statusId,typeId,number,name,information,members,date,currency,DateStart,DateEnd,Objects,Contact,DeliveryTime,Address,City,Zip
+PROJECT,b8b9904c-267b-438c-969a-c32918470740,afb95beb-c3c0-414b-b8d2-9421a62e7659,745618b5-6a1e-4bf7-9a03-86839916a859,42ddb23f-b0b0-4e02-ab1f-aab43e455501,10000,Communication construction,"designing the layout of energy distribution, water pipes and ventilation systems and identifying relevant materials
+","1218cdcc-3d1c-41d0-b063-f34734a89b6a,0be618c9-e68b-435a-bdf4-d7f4ee6b6ba4,6909a912-3641-4e54-bdbd-a3542ba90db5",,CHF,,,541da243-095b-4b11-a212-b518a9a1f6c4,,,,,
+PROJECT,b42d45bc-4714-4964-bca6-a05091d5829b,afb95beb-c3c0-414b-b8d2-9421a62e7659,745618b5-6a1e-4bf7-9a03-86839916a859,42ddb23f-b0b0-4e02-ab1f-aab43e455502,10001,Construction team management,"Liaising with the architect, surveyors and other construction professionals, sometimes managing the design project team
+","ab2e9356-d49e-40a3-913f-9e0d3a126aa3,6909a912-3641-4e54-bdbd-a3542ba90db5",,CHF,,,,,,,,
+PROJECT,3e5b1a94-5f34-47a6-be15-992defe07452,5c350ea9-c1bc-4a4c-aa0f-6c60ea084c02,745618b5-6a1e-4bf7-9a03-86839916a859,42ddb23f-b0b0-4e02-ab1f-aab43e455503,10002,System tests,"Сarrying out tests on systems and making changes to plans where necessary
+","1218cdcc-3d1c-41d0-b063-f34734a89b6a,6909a912-3641-4e54-bdbd-a3542ba90db5",,CHF,,,,,,,,
+PROJECT,dea86b6c-8e04-45f1-b0e8-db87e94553e6,7b41229e-1d26-4bf9-bc2f-09c1ac3c9bfd,745618b5-6a1e-4bf7-9a03-86839916a859,42ddb23f-b0b0-4e02-ab1f-aab43e455504,10003,Environmental legislation and initiatives,"Keeping up to date with relevant changes in environmental legislation and initiatives including international legislation where applicable
+","ab2e9356-d49e-40a3-913f-9e0d3a126aa3,0be618c9-e68b-435a-bdf4-d7f4ee6b6ba4",,CHF,,,"541da243-095b-4b11-a212-b518a9a1f6c4,2a1dd3a7-e18d-411d-ad40-8fdbcb875b17",,,,,
+PROJECT,937eca02-76c5-42b4-9bcc-da6856b6353b,2e3782e5-5b96-4f8a-97e0-6369f820608b,745618b5-6a1e-4bf7-9a03-86839916a859,d85bafb4-a85d-41ec-a904-029a55fc9657,10004,Constraining factors,"Working around constraining factors such as town planning legislation, environmental impact and project budget
+",ab2e9356-d49e-40a3-913f-9e0d3a126aa3,,CHF,,,,,,,,
+PROJECT,5130b75c-97a2-49ec-bbac-8715180ed51a,9b787e37-ee5d-4a7e-85d2-d6fc13349736,745618b5-6a1e-4bf7-9a03-86839916a859,d85bafb4-a85d-41ec-a904-029a55fc9658,10005,Environmental performance data,"Assessing, analysing and collating environmental performance data and reporting information to internal staff, clients and regulatory bodies
+","ab2e9356-d49e-40a3-913f-9e0d3a126aa3,6909a912-3641-4e54-bdbd-a3542ba90db5",,CHF,,,,,,,,
+PROJECT,1c321b9c-b906-44ad-a68c-d28f0c27e68d,4746cc1d-3e80-4782-b78a-ac889f238034,63aa64f2-c35c-464b-8c9e-eb895fba047c,d85bafb4-a85d-41ec-a904-029a55fc9659,10006,Overseeing the work,"Overseeing the work of building surveyors and providing them with supportive management
+","1218cdcc-3d1c-41d0-b063-f34734a89b6a,0be618c9-e68b-435a-bdf4-d7f4ee6b6ba4",,CHF,,,,,,,,
+PROJECT,8b230caf-5935-4dd9-9322-d83e93d7faf1,b537ae7f-b5d6-4868-a43f-5036e5faeb1f,63aa64f2-c35c-464b-8c9e-eb895fba047c,d85bafb4-a85d-41ec-a904-029a55fc9660,10007,Presentations and reports,"Giving presentations and writing reports highlighting the practical implications of the architect’s designs
+",ab2e9356-d49e-40a3-913f-9e0d3a126aa3,,CHF,,,,,,,,
+PROJECT,f041421b-bacb-4dec-b819-aa57791cdae0,1386e1b9-e96a-4b47-9bd5-eb3b77b10f78,63aa64f2-c35c-464b-8c9e-eb895fba047c,d85bafb4-a85d-41ec-a904-029a55fc9661,10008,Energy effaceency,"Promoting energy efficiency and other sustainability initiatives
+","fce85f62-6ea1-469e-972b-72ec73dad93d,6909a912-3641-4e54-bdbd-a3542ba90db5",,CHF,,,,,,,,
+PROJECT,8bce98dc-492d-4ab3-83f6-59ed22048285,cc75f168-28e1-4664-b06e-b5f3b6db25f1,63aa64f2-c35c-464b-8c9e-eb895fba047c,d85bafb4-a85d-41ec-a904-029a55fc9662,10009,Environment Agency communication,"Liaising with regulatory bodies such as the Environment Agency
+","fce85f62-6ea1-469e-972b-72ec73dad93d,0be618c9-e68b-435a-bdf4-d7f4ee6b6ba4",,CHF,,,,,,,,

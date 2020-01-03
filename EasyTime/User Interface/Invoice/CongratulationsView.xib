@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CongratulationsView" customModule="EasyTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congratulationsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FJ1-ej-7TI">
+                    <rect key="frame" x="120" y="245" width="135" height="197"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="135" id="5mG-J6-zeg"/>
+                        <constraint firstAttribute="height" constant="197" id="tM7-Ol-2Cq"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLd-ML-M1J">
+                    <rect key="frame" x="12" y="161" width="351" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.18431372549019609" green="0.23529411764705882" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your invoice has been sent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmf-fu-wv4">
+                    <rect key="frame" x="12" y="475" width="351" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.42745098039215684" green="0.53725490196078429" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kv-7R-OhB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <action selector="didTapHideButtonWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="U0d-OC-zz8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Hmf-fu-wv4" secondAttribute="trailing" constant="12" id="4fp-oL-frI"/>
+                <constraint firstItem="8kv-7R-OhB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BhX-og-Yov"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8kv-7R-OhB" secondAttribute="trailing" id="Iiw-Ai-Bw1"/>
+                <constraint firstItem="FJ1-ej-7TI" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="OhY-G3-gsp"/>
+                <constraint firstItem="FJ1-ej-7TI" firstAttribute="top" secondItem="tLd-ML-M1J" secondAttribute="bottom" constant="60" id="QLw-X4-xyh"/>
+                <constraint firstItem="Hmf-fu-wv4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="RPl-kJ-yfs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tLd-ML-M1J" secondAttribute="trailing" constant="12" id="V6y-VB-hlP"/>
+                <constraint firstItem="Hmf-fu-wv4" firstAttribute="top" secondItem="FJ1-ej-7TI" secondAttribute="bottom" constant="33" id="eFt-VO-Vyi"/>
+                <constraint firstItem="FJ1-ej-7TI" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="mmF-8I-nCH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8kv-7R-OhB" secondAttribute="bottom" id="oJ9-bb-ULe"/>
+                <constraint firstItem="8kv-7R-OhB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="t1s-9K-P9l"/>
+                <constraint firstItem="tLd-ML-M1J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="wde-65-k2b"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="lblMessage" destination="Hmf-fu-wv4" id="s7J-u2-cQJ"/>
+                <outlet property="lblTitle" destination="tLd-ML-M1J" id="Fgt-qu-Y29"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="congratulationsIcon" width="135" height="197"/>
+    </resources>
+</document>

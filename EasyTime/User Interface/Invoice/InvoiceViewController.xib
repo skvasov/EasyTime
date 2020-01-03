@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvoiceViewController" customModule="EasyTime" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSign" destination="0Zs-A4-HYX" id="tDJ-B5-1HM"/>
+                <outlet property="lblCompanyName" destination="D48-Oc-Cct" id="HXo-Mk-nV5"/>
+                <outlet property="lblDiscount" destination="LR2-fj-hjC" id="CtN-Sy-Lfg"/>
+                <outlet property="tableView" destination="lg6-ck-RJL" id="VxW-sD-nO4"/>
+                <outlet property="vDiscountPlaceholder" destination="d2y-sl-QI0" id="lc9-3C-d8a"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="buttons" destination="0Zs-A4-HYX" collectionClass="NSMutableArray" id="wRn-67-558"/>
+                <outletCollection property="buttons" destination="jP9-Sr-TxG" collectionClass="NSMutableArray" id="IbV-hv-tRy"/>
+                <outletCollection property="buttons" destination="hvq-ac-a9r" collectionClass="NSMutableArray" id="UjZ-VU-b08"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D48-Oc-Cct">
+                    <rect key="frame" x="12" y="0.0" width="261" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="TR1-TJ-6DC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.37254901960784315" green="0.45490196078431372" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2y-sl-QI0">
+                    <rect key="frame" x="273" y="7.5" width="90" height="21"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="00000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR2-fj-hjC">
+                            <rect key="frame" x="5" y="0.0" width="80" height="21"/>
+                            <color key="backgroundColor" red="0.63529411764705879" green="0.68627450980392157" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.63529411764705879" green="0.68627450980392157" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="LR2-fj-hjC" secondAttribute="trailing" constant="5" id="19O-4P-b1k"/>
+                        <constraint firstAttribute="bottom" secondItem="LR2-fj-hjC" secondAttribute="bottom" id="1ti-9g-2HH"/>
+                        <constraint firstItem="LR2-fj-hjC" firstAttribute="top" secondItem="d2y-sl-QI0" secondAttribute="top" id="W5Z-Jt-jCW"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="W8U-7S-Urt"/>
+                        <constraint firstAttribute="height" constant="21" id="u1T-p8-4hh"/>
+                        <constraint firstItem="LR2-fj-hjC" firstAttribute="leading" secondItem="d2y-sl-QI0" secondAttribute="leading" constant="5" id="yUw-xt-MjC"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHX-0y-dUi" userLabel="Separator View">
+                    <rect key="frame" x="0.0" y="36" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.37254901960784315" green="0.45490196078431372" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="FNn-yX-2DT"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="29" sectionFooterHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-ck-RJL">
+                    <rect key="frame" x="0.0" y="36.5" width="375" height="530.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qEz-3e-yP1"/>
+                        <outlet property="delegate" destination="-1" id="kg9-0e-lhq"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="im7-T8-H7i" userLabel="Separator View">
+                    <rect key="frame" x="0.0" y="567" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="ple-mE-1NW"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="W2S-Ox-FGa">
+                    <rect key="frame" x="10" y="577" width="355" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zs-A4-HYX">
+                            <rect key="frame" x="0.0" y="0.0" width="111" height="80"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="Sign" image="signInvoiceIcon">
+                                <color key="titleColor" red="0.25490196079999999" green="0.35686274509999999" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapSignButtonWithSender:" destination="-1" eventType="touchUpInside" id="oIG-fw-xOT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jP9-Sr-TxG">
+                            <rect key="frame" x="122" y="0.0" width="111" height="80"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="Save" image="saveInvoiceIcon">
+                                <color key="titleColor" red="0.25490196079999999" green="0.35686274509999999" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapSaveButtonWithSender:" destination="-1" eventType="touchUpInside" id="RuO-Iw-0Qm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-ac-a9r">
+                            <rect key="frame" x="244" y="0.0" width="111" height="80"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="Send" image="sendInvoiceIcon">
+                                <color key="titleColor" red="0.25490196079999999" green="0.35686274509999999" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapSendButtonWithSender:" destination="-1" eventType="touchUpInside" id="Bds-rf-H4a"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="8Sp-wm-8qO"/>
+                        <constraint firstAttribute="height" constant="80" id="xll-GN-eXb"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d2y-sl-QI0" firstAttribute="centerY" secondItem="D48-Oc-Cct" secondAttribute="centerY" id="1cJ-LO-etZ"/>
+                <constraint firstItem="D48-Oc-Cct" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5X6-VA-znj"/>
+                <constraint firstItem="lg6-ck-RJL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BB1-8A-NPg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="W2S-Ox-FGa" secondAttribute="bottom" constant="10" id="J9A-W2-olN"/>
+                <constraint firstItem="W2S-Ox-FGa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Mbn-Fy-oQX"/>
+                <constraint firstItem="im7-T8-H7i" firstAttribute="top" secondItem="lg6-ck-RJL" secondAttribute="bottom" id="PAn-Aq-R01"/>
+                <constraint firstAttribute="trailing" secondItem="d2y-sl-QI0" secondAttribute="trailing" constant="12" id="SbM-Jo-z0j"/>
+                <constraint firstItem="d2y-sl-QI0" firstAttribute="leading" secondItem="D48-Oc-Cct" secondAttribute="trailing" id="ULm-Tt-9UW"/>
+                <constraint firstItem="W2S-Ox-FGa" firstAttribute="top" secondItem="lg6-ck-RJL" secondAttribute="bottom" constant="10" id="Uba-fR-IMy"/>
+                <constraint firstItem="lg6-ck-RJL" firstAttribute="top" secondItem="uHX-0y-dUi" secondAttribute="bottom" id="XDT-Sh-CYS"/>
+                <constraint firstItem="im7-T8-H7i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YRg-E5-Syp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uHX-0y-dUi" secondAttribute="trailing" id="c2V-rs-khz"/>
+                <constraint firstAttribute="trailing" secondItem="im7-T8-H7i" secondAttribute="trailing" id="dBH-xB-lOD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W2S-Ox-FGa" secondAttribute="trailing" constant="10" id="eOA-j6-Awa"/>
+                <constraint firstItem="uHX-0y-dUi" firstAttribute="top" secondItem="D48-Oc-Cct" secondAttribute="bottom" id="fnu-IT-1ZE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lg6-ck-RJL" secondAttribute="trailing" id="qjQ-iq-KuO"/>
+                <constraint firstItem="D48-Oc-Cct" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="ulm-nX-HU6"/>
+                <constraint firstItem="uHX-0y-dUi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vX4-Bh-gNy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="saveInvoiceIcon" width="25" height="26"/>
+        <image name="sendInvoiceIcon" width="27" height="26"/>
+        <image name="signInvoiceIcon" width="26" height="26"/>
+    </resources>
+</document>
